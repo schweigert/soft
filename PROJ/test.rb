@@ -115,4 +115,7 @@ class TesteOnibus < Test::Unit::TestCase
 		end
     end
   end
+  
+  #comentário inutil
+  
 end
