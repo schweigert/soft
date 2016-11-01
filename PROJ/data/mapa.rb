@@ -1,6 +1,5 @@
 class Mapa
-	@matAdjacente
-	@ruas
-	
+
+	@@matAdjacente = [[]]
 	
 end

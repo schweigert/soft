@@ -1,14 +1,20 @@
+require_relative "rota"
+
 class Onibus
-	@gpsId
+	@gps
 	@placa
+	@rota
 	
-	def posicao 
+	attr_reader :gps, :placa, :rota
+	
+	def initialize gps,rota, placa
+		@gps = gps
+		@rota = rota
+		@placa = placa
 	end
 	
-	def distancia v
-	end
-	
-	def tempo v
+	def posicao
+		return @gps.posicao
 	end
 	
 end
