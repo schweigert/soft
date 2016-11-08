@@ -1,0 +1,6 @@
+class Mapa
+
+  @@matAdj = []
+
+
+end
