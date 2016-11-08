@@ -2,6 +2,8 @@ class Ponto
 
   @@pontos = []
 
+  def self.pontos; return @@pontos; end
+
   def self.setupPontos
     txt = open("pontos").read
     lines = txt.split "\n"
@@ -14,6 +16,7 @@ class Ponto
   end
 
   def self.showPontos
+    puts "\nShow: Pontos"
     a = 0
     for i in @@pontos
       puts "#{a}: #{i}"
