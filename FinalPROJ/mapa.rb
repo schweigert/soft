@@ -5,6 +5,8 @@ class Mapa
 
   @@matAdj = []
 
+  def self.matAdj; return @@matAdj; end
+
   def self.setupMapa
     rotas = Rota.rotas
 
@@ -26,7 +28,7 @@ class Mapa
       for j in 0..(v-1)
         if @@matAdj[i]
           if @@matAdj[i][j]
-            print "#{@@matAdj[i][j]} "
+            print "#{@@matAdj[i][j].size} "
           else
             print '0 '
           end
@@ -36,7 +38,6 @@ class Mapa
       end
       print "\n"
     end
-
   end
 
 end
