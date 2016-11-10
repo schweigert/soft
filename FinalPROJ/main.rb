@@ -18,4 +18,5 @@ Mapa.setupMapa
 Mapa.showMapa
 
 Usuario.setupUsuario(1)
-puts Usuario.procurarCaminhos(5).to_s
+Usuario.showUsuario
+Usuario.dijkstra 6
