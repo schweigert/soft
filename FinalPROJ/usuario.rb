@@ -6,8 +6,7 @@ class Usuario
   end
 
   def self.showUsuario
-    puts "\nShow: Usuario"
-    puts "O usuário está em: #{Ponto.pontos[@@posicao]}"
+    puts "Você está em: #{Ponto.pontos[@@posicao]}"
   end
 
   def self.dijkstra objetivo
@@ -97,9 +96,16 @@ class Usuario
         rota << r[objetivo][0]
         objetivo = r[objetivo][0]
     }
+    rotas = Rota.rotas
 
-    print rota.reverse
-
+    puts "Você deve usar esta rota:"
+    for i in rota.reverse
+      puts "#{i}-#{Ponto.pontos[i]}:"
+      for j in rotas.keys
+        puts "\t#{j}" if rotas[j].include? i
+      end
+    end
+    gets
   end
 
 end
