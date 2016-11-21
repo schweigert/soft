@@ -89,7 +89,11 @@ class Usuario
 
     rota = []
 
-    return rota if r[objetivo][0] == -1
+    if r[objetivo][0] == -1
+      puts "Parece que você não consegue alcançar este local :'("
+      gets
+      return []
+    end
     rota << objetivo
     loop {
         break if objetivo == @@posicao

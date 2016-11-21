@@ -34,6 +34,7 @@ def menu_calcularRota
   for i in 0..(Ponto.pontos.size()-1)
     if Ponto.pontos[i].chomp().delete(" ") == local.chomp().delete(" ")
       a = i
+      puts "Encontramos essa rua! ;)"
       break
     end
   end

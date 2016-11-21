@@ -82,7 +82,7 @@ class Rota
     ra = @@rotas[a]
     rb = @@rotas[b]
     r = []
-    puts "Testando rota #{ra.to_s} com #{rb.to_s}"
+    # puts "Testando rota #{ra.to_s} com #{rb.to_s}"
     for i in ra.uniq
       for j in rb.uniq
         if i == j
