@@ -1,6 +1,9 @@
 require_relative "mapa"
 require_relative "ponto"
 class Usuario
+
+  def self.posicao; return @@posicao; end
+
   def self.setupUsuario v
     @@posicao = v
   end
@@ -101,15 +104,21 @@ class Usuario
         objetivo = r[objetivo][0]
     }
     rotas = Rota.rotas
-
+    retorno = Hash.new
     puts "Você deve usar esta rota:"
     for i in rota.reverse
       puts "#{i}-#{Ponto.pontos[i]}:"
+      retorno[i] = []
       for j in rotas.keys
-        puts "\t#{j}" if rotas[j].include? i
+        if rotas[j].include? i
+          puts "\t#{j}"
+          retorno[i] << j
+        end
       end
     end
     gets
+
+    return retorno
   end
 
 end
